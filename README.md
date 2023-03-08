@@ -26,7 +26,7 @@ response = client.get_access_token(code)
 ```
 client.set_token(access_token)
 ```  
-Check more information about Notion Oauth: https://developers.notion.com/docs/authorization
+Check more information about Notion Oauth: https://developers.notion.com/docs/authorization  
 If you already have an access token:
 ```
 from notion.client import Client
