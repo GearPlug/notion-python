@@ -8,7 +8,7 @@ This library uses Oauth2 for authentication.
 pip install notion-python
 ```
 ## Usage
-If you don't have an access token:
+* If you don't have an access token:
 ```
 from notion.client import Client
 client = Client(client_id, client_secret, redirect_uri)
@@ -27,16 +27,19 @@ response = client.get_access_token(code)
 client.set_token(access_token)
 ```  
 Check more information about Notion Oauth: https://developers.notion.com/docs/authorization  
-If you already have an access token:
+
+* If you already have an access token:
 ```
 from notion.client import Client
 client = Client(access_token=access_token)
 ```
+***
 ### User
 #### - Get Current User
 ```
 user = client.get_current_user()
 ```
+***
 ### Databases and Pages
 #### - List all objects
 ```
