@@ -33,13 +33,17 @@ Check more information about Notion Oauth: https://developers.notion.com/docs/au
 from notion.client import Client
 client = Client(access_token=access_token)
 ```
-***
 ### User
 #### - Get Current User
 ```
 user = client.get_current_user()
 ```
-***
+#### - List users
+```
+users = client.list_users(page_size=3)
+# page_size: max 100 
+# start_cursor: pagination variable, get this value from previous page 'next_cursor' parameter.
+```
 ### Databases and Pages
 #### - List all objects
 ```

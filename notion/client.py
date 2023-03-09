@@ -43,6 +43,14 @@ class Client(object):
     def get_current_user(self):
         return self.get("users/me")
 
+    def list_users(self, page_size=None, start_cursor=None):
+        params = {}
+        if page_size:
+            params["page_size"] = page_size
+        if start_cursor:
+            params["start_cursor"] = start_cursor
+        return self.get("users", params=params)
+
     def list_objects(self, object_type, page_size=None, start_cursor=None):
         """
         object_type options are: page or database
