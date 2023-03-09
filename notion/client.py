@@ -17,7 +17,7 @@ class Client(object):
         self.CLIENT_SECRET = client_secret
         self.REDIRECT_URI = redirect_uri
         if access_token is not None:
-            pass
+            self.set_token(access_token)
         if client_id and client_secret:
             self.CREDENTIALS = base64.b64encode(f"{self.CLIENT_ID}:{self.CLIENT_SECRET}".encode()).decode()
 
