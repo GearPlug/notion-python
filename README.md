@@ -61,9 +61,11 @@ database = client.get_database(database_id)
 How to build a filter object: https://developers.notion.com/reference/post-database-query-filter  
 How to build a sort object: https://developers.notion.com/reference/post-database-query-sort
 ```
+filter_criteria = {"property": "Main Email", "email": {"equals": "example@mail.com"}}
+# Where 'Main Email' is the field name and 'email' is the field type
 pages = client.query_database_pages(
     database_id, 
-    filters: dict = None, 
+    filters=filter_criteria, 
     sorts: dict = None, 
     start_cursor=None, 
     page_size=None
