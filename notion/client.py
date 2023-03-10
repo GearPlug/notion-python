@@ -74,7 +74,7 @@ class Client(object):
         if filters:
             body["filter"] = filters
         if sorts:
-            body["sort"] = sorts
+            body["sorts"] = sorts
         if start_cursor:
             body["start_cursor"] = start_cursor
         if page_size:
