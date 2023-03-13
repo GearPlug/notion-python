@@ -7,7 +7,7 @@ def read(fname):
 
 
 setup(
-    name="notion-python",
+    name="notion-python-2",
     version="0.1.0",
     description="API wrapper for Notion written in Python",
     long_description=read("README.md"),

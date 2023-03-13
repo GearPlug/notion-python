@@ -5,7 +5,7 @@
 This library uses Oauth2 for authentication.
 ## Installing
 ```
-pip install notion-python
+pip install notion-python-2
 ```
 ## Usage
 * If you don't have an access token:
