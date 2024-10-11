@@ -82,6 +82,28 @@ class Client(object):
 
         return self.post(f"databases/{database_id}/query", data=json.dumps(body))
 
+    def patch_children_to_page(self, page_id, block_type, content):
+        body = {
+            "children":
+                [
+                    {
+                        "object": "block",
+                        "type": block_type,
+                        block_type: {
+                            "rich_text": [
+                                {
+                                    "type": "text",
+                                    "text": {
+                                        "content": content
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+        }
+        return self.patch(f"blocks/{page_id}/children", data=json.dumps(body))
+
     def create_page(self, database_id, properties, cover_url=None):
         body = {"parent": {"database_id": database_id}, "properties": properties}
         if cover_url:
